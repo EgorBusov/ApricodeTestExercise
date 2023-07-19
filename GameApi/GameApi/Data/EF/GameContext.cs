@@ -1,4 +1,4 @@
-﻿using GameApi.Models;
+﻿using GameApi.Data.EF.EFModels;
 using Microsoft.EntityFrameworkCore;
 
 namespace GameApi.Data.EF
@@ -11,6 +11,16 @@ namespace GameApi.Data.EF
 
         }
 
-        DbSet<Game> Games { get; set; }
+        public DbSet<GameModel> Games { get; set; }
+
+        public DbSet<GenreModel> Genres { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<GameModel>()
+                .HasMany(g => g.Genres)
+                .WithMany(g => g.Games)
+                .UsingEntity(j => j.ToTable("GameGenres")); 
+        }
     }
 }

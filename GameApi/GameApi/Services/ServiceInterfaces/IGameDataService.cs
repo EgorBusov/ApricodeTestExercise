@@ -1,4 +1,5 @@
-﻿using GameApi.Models;
+﻿using GameApi.Data.EF.EFModels;
+using GameApi.Models;
 
 namespace GameApi.Services.ServiceInterfaces
 {
