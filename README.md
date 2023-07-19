@@ -25,7 +25,7 @@ genre (string, path) - The name of the genre to filter by.
       
 Method: POST
 
-Path: /Game/AddGame
+Path: api/Game/AddGame
 
 Description: Add a new game to the library.
 
