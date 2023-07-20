@@ -30,11 +30,17 @@ Path: api/Game/AddGame
 Description: Add a new game to the library.
 
 Request Body:
+
 id (integer, required) - The ID of the game.
+
 name (string, required) - The name of the game.
+
 devStudio (string, required) - The name of the game's development studio.
+
 genres (array of objects, required) - The genres associated with the game.
+
 id (integer, required) - The ID of the genre.
+
 name (string, required) - The name of the genre.
 
 
@@ -48,10 +54,15 @@ Description: Update an existing game in the library.
 
 Request Body:
 id (integer, required) - The ID of the game.
+
 name (string, required) - The new name of the game.
+
 devStudio (string, required) - The new name of the game's development studio.
+
 genres (array of objects, required) - The new genres associated with the game.
+
 id (integer, required) - The ID of the genre.
+
 name (string, required) - The name of the genre.
 
 
@@ -65,6 +76,9 @@ Description: Delete a game from the library.
 
 Parameters:
 id (integer, path) - The ID of the game to delete.
+
 Response Codes
+
 200 OK: The request was successful.
+
 400 Bad Request: There was an error or the request was invalid.
