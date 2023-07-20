@@ -31,8 +31,6 @@ Description: Add a new game to the library.
 
 Request Body:
 
-id (integer, required) - The ID of the game.
-
 name (string, required) - The name of the game.
 
 devStudio (string, required) - The name of the game's development studio.
